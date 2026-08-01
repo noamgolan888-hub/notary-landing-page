@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>עו״ד ונוטריון | צוואות, תרגומים נוטריוניים, אפוסטיל ואימות חתימה</title>
+  <meta name="description" content="נוטריון מוסמך: צוואות נוטריוניות, אישורי תרגום, אפוסטיל, אימות חתימה, ייפוי כוח והסכמי ממון. טיפול אישי של הנוטריון עצמו, מענה מהיר בוואטסאפ — 055-262-5128." />
+  <meta name="theme-color" content="#0F172A" />
+  <link rel="canonical" href="https://example.co.il/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="he_IL" />
+  <meta property="og:title" content="עו״ד ונוטריון | שירותי נוטריון מוסמכים" />
+  <meta property="og:description" content="צוואות נוטריוניות, אישורי תרגום, אפוסטיל, אימות חתימה וייפוי כוח. טיפול אישי ומענה מהיר." />
+  <!-- TODO: להחליף בתמונת שיתוף אמיתית (1200x630) -->
+  <meta property="og:image" content="https://example.co.il/og-image.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- מסמן שה-JS פעיל, כדי שאנימציית החשיפה לא תסתיר תוכן אם הסקריפטים חסומים -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Heebo', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            navy: {
+              950: '#0B1220',
+              900: '#0F172A',
+              800: '#152238',
+              700: '#1E3A8A',
+              600: '#2447A8',
+            },
+            gold: {
+              700: '#B45309',
+              600: '#D97706',
+              500: '#F59E0B',
+              100: '#FEF3C7',
+            },
+            whatsapp: {
+              DEFAULT: '#25D366',
+              dark: '#1EB456',
+            },
+          },
+          boxShadow: {
+            card: '0 1px 2px rgba(15,23,42,.04), 0 8px 24px -12px rgba(15,23,42,.18)',
+            'card-hover': '0 2px 4px rgba(15,23,42,.05), 0 20px 40px -16px rgba(15,23,42,.28)',
+            gold: '0 12px 28px -12px rgba(217,119,6,.55)',
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
+    body { -webkit-font-smoothing: antialiased; }
+
+    /* רקע דקורטיבי לסקשן ה-Hero */
+    .hero-grid {
+      background-image:
+        linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
+      background-size: 56px 56px;
+    }
+    .hero-glow {
+      background:
+        radial-gradient(60% 55% at 78% 12%, rgba(217,119,6,.20), transparent 62%),
+        radial-gradient(55% 50% at 12% 88%, rgba(30,58,138,.55), transparent 60%);
+    }
+
+    /* חשיפה הדרגתית בגלילה — פעילה רק כאשר ה-JS זמין */
+    .js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+    .js .reveal.is-visible { opacity: 1; transform: none; }
+
+    /* פוקוס נראה בכל האלמנטים האינטראקטיביים */
+    :where(a, button, input, select, textarea, summary):focus-visible {
+      outline: 3px solid #D97706;
+      outline-offset: 3px;
+      border-radius: 6px;
+    }
+
+    /* אקורדיון שאלות נפוצות */
+    details > summary { list-style: none; cursor: pointer; }
+    details > summary::-webkit-details-marker { display: none; }
+    details[open] .faq-chevron { transform: rotate(180deg); }
+
+    /* פעימה עדינה סביב כפתור הוואטסאפ הצף */
+    @keyframes fab-pulse {
+      0%   { box-shadow: 0 0 0 0 rgba(37,211,102,.45); }
+      70%  { box-shadow: 0 0 0 16px rgba(37,211,102,0); }
+      100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+    }
+    .fab-pulse { animation: fab-pulse 2.6s ease-out infinite; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .fab-pulse { animation: none; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+
+<body class="bg-slate-50 font-sans text-navy-900 antialiased">
+
+  <a href="#main"
+     class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:right-4 focus:z-[100] focus:rounded-lg focus:bg-navy-900 focus:px-5 focus:py-3 focus:text-white focus:shadow-lg">
+    דלג לתוכן הראשי
+  </a>
+
+  <!-- ==================== HEADER ==================== -->
+  <header id="site-header"
+          class="fixed inset-x-0 top-0 z-50 transition-all duration-300"
+          data-header>
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-20 items-center justify-between gap-4">
+
+        <!-- לוגו / שם המשרד -->
+        <a href="#hero" class="flex shrink-0 items-center gap-3" aria-label="חזרה לראש העמוד">
+          <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-gold-600 to-gold-700 shadow-gold">
+            <svg class="h-6 w-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 3l7.5 3v5.2c0 4.4-3 8.4-7.5 9.8-4.5-1.4-7.5-5.4-7.5-9.8V6L12 3z" />
+              <path d="M9.2 12.1l1.9 1.9 3.7-3.9" />
+            </svg>
+          </span>
+          <span class="leading-tight">
+            <!-- TODO: להחליף בשם המלא, למשל "עו״ד ישראל ישראלי — נוטריון" -->
+            <span data-brand class="block text-[17px] font-bold tracking-tight text-white transition-colors">עו״ד ונוטריון</span>
+            <span data-tagline class="block text-[12px] font-medium text-gold-500 transition-colors">צוואות · תרגומים · אפוסטיל · אימות חתימה</span>
+          </span>
+        </a>
+
+        <!-- ניווט ראשי -->
+        <nav class="hidden lg:block" aria-label="ניווט ראשי">
+          <ul data-nav class="flex items-center gap-1">
+            <li><a href="#services" class="rounded-lg px-4 py-2 text-[15px] font-medium text-slate-200 transition hover:bg-white/10 hover:text-white">שירותים</a></li>
+            <li><a href="#about"    class="rounded-lg px-4 py-2 text-[15px] font-medium text-slate-200 transition hover:bg-white/10 hover:text-white">אודות</a></li>
+            <li><a href="#why"      class="rounded-lg px-4 py-2 text-[15px] font-medium text-slate-200 transition hover:bg-white/10 hover:text-white">למה אני</a></li>
+            <li><a href="#faq"      class="rounded-lg px-4 py-2 text-[15px] font-medium text-slate-200 transition hover:bg-white/10 hover:text-white">שאלות נפוצות</a></li>
+            <li><a href="#contact"  class="rounded-lg px-4 py-2 text-[15px] font-medium text-slate-200 transition hover:bg-white/10 hover:text-white">צור קשר</a></li>
+          </ul>
+        </nav>
+
+        <!-- פעולות מהירות -->
+        <div class="hidden items-center gap-2 md:flex">
+          <a href="tel:+972552625128"
+             data-call-btn
+             class="flex items-center gap-2 rounded-xl border border-white/25 px-4 py-2.5 text-[15px] font-semibold text-white transition hover:bg-white/10"
+             aria-label="חיוג למשרד בטלפון 055-262-5128">
+            <svg class="h-[18px] w-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M6.6 3.5h-2A1.6 1.6 0 003 5.1C3 13.3 10.7 21 18.9 21a1.6 1.6 0 001.6-1.6v-2a1.1 1.1 0 00-.85-1.07l-3.3-.8a1.1 1.1 0 00-1.1.38l-1 1.2a13.6 13.6 0 01-5.35-5.35l1.2-1a1.1 1.1 0 00.38-1.1l-.8-3.3a1.1 1.1 0 00-1.07-.85z" />
+            </svg>
+            <span dir="ltr">055-262-5128</span>
+          </a>
+          <a href="https://wa.me/972552625128?text=שלום, אני מעוניין בבירור לגבי שירותי נוטריון"
+             target="_blank" rel="noopener"
+             class="flex items-center gap-2 rounded-xl bg-whatsapp px-4 py-2.5 text-[15px] font-semibold text-white shadow-lg shadow-whatsapp/25 transition hover:bg-whatsapp-dark"
+             aria-label="פנייה מהירה בוואטסאפ (נפתח בחלון חדש)">
+            <svg class="h-[18px] w-[18px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.87 9.87 0 004.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm5.8 14.13c-.24.68-1.42 1.31-1.96 1.36-.5.05-.99.23-3.35-.7-2.82-1.11-4.6-3.98-4.74-4.17-.14-.19-1.13-1.5-1.13-2.86s.71-2.03.96-2.31c.25-.28.55-.35.73-.35.18 0 .37 0 .53.01.17.01.4-.06.63.48.24.57.8 1.97.87 2.11.07.14.12.31.02.5-.09.19-.14.31-.28.47-.14.16-.3.36-.42.48-.14.14-.29.29-.12.57.16.28.73 1.21 1.57 1.96 1.08.96 1.99 1.26 2.27 1.4.28.14.45.12.61-.07.17-.19.7-.82.89-1.1.19-.28.37-.23.63-.14.25.09 1.65.78 1.93.92.28.14.47.21.54.33.07.11.07.66-.17 1.31z"/>
+            </svg>
+            <span>וואטסאפ</span>
+          </a>
+        </div>
+
+        <!-- כפתור תפריט לנייד -->
+        <button type="button"
+                data-menu-toggle
+                aria-expanded="false"
+                aria-controls="mobile-menu"
+                class="flex h-11 w-11 items-center justify-center rounded-xl border border-white/25 text-white transition hover:bg-white/10 lg:hidden"
+                aria-label="פתיחת תפריט ניווט">
+          <svg data-icon-open class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"
+               stroke-linecap="round" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+          <svg data-icon-close class="hidden h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"
+               stroke-linecap="round" aria-hidden="true">
+            <path d="M6 6l12 12M18 6L6 18" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- תפריט נייד -->
+    <div id="mobile-menu" data-mobile-menu hidden
+         class="border-t border-slate-200 bg-white shadow-xl lg:hidden">
+      <nav class="mx-auto max-w-7xl px-4 py-4 sm:px-6" aria-label="ניווט נייד">
+        <ul class="space-y-1">
+          <li><a href="#services" class="block rounded-lg px-4 py-3 text-base font-medium text-navy-900 transition hover:bg-slate-100">שירותים</a></li>
+          <li><a href="#about"    class="block rounded-lg px-4 py-3 text-base font-medium text-navy-900 transition hover:bg-slate-100">אודות</a></li>
+          <li><a href="#why"      class="block rounded-lg px-4 py-3 text-base font-medium text-navy-900 transition hover:bg-slate-100">למה אני</a></li>
+          <li><a href="#faq"      class="block rounded-lg px-4 py-3 text-base font-medium text-navy-900 transition hover:bg-slate-100">שאלות נפוצות</a></li>
+          <li><a href="#contact"  class="block rounded-lg px-4 py-3 text-base font-medium text-navy-900 transition hover:bg-slate-100">צור קשר</a></li>
+        </ul>
+        <div class="mt-4 grid grid-cols-2 gap-3 border-t border-slate-200 pt-4">
+          <a href="tel:+972552625128"
+             class="flex items-center justify-center gap-2 rounded-xl bg-navy-900 px-4 py-3 font-semibold text-white transition hover:bg-navy-800"
+             aria-label="חיוג למשרד בטלפון 055-262-5128">
+            <span>חייג עכשיו</span>
+          </a>
+          <a href="https://wa.me/972552625128?text=שלום, אני מעוניין בבירור לגבי שירותי נוטריון"
+             target="_blank" rel="noopener"
+             class="flex items-center justify-center gap-2 rounded-xl bg-whatsapp px-4 py-3 font-semibold text-white transition hover:bg-whatsapp-dark"
+             aria-label="פנייה מהירה בוואטסאפ (נפתח בחלון חדש)">
+            <span>וואטסאפ</span>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ==================== HERO ==================== -->
+    <section id="hero" class="relative overflow-hidden bg-navy-900 pt-32 pb-20 sm:pt-40 sm:pb-28">
+      <div class="absolute inset-0 hero-grid" aria-hidden="true"></div>
+      <div class="absolute inset-0 hero-glow" aria-hidden="true"></div>
+      <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-slate-50/10 to-transparent" aria-hidden="true"></div>
+
+      <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid items-center gap-14 lg:grid-cols-12">
+
+          <div class="lg:col-span-7">
+            <p class="inline-flex items-center gap-2 rounded-full border border-gold-500/30 bg-gold-500/10 px-4 py-1.5 text-sm font-semibold text-gold-500">
+              <span class="h-1.5 w-1.5 rounded-full bg-gold-500" aria-hidden="true"></span>
+              נוטריון מוסמך · שירות בכל רחבי הארץ
+            </p>
+
+            <h1 class="mt-6 text-4xl font-extrabold leading-[1.15] tracking-tight text-white sm:text-5xl lg:text-[3.4rem]">
+              שירותי נוטריון
+              <span class="text-gold-500">מקצועיים, מהירים</span>
+              ומוסמכים
+            </h1>
+
+            <p class="mt-6 max-w-xl text-lg leading-relaxed text-slate-300">
+              צוואות נוטריוניות, אישורי תרגום, אפוסטיל, אימות חתימה, ייפוי כוח והסכמי ממון —
+              בליווי אישי של הנוטריון עצמו, בשקיפות מלאה ובזמני טיפול קצרים. שולחים הודעה אחת
+              ומקבלים תשובה ברורה עם מחיר ולוח זמנים.
+            </p>
+
+            <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+              <a href="https://wa.me/972552625128?text=שלום, אני מעוניין בבירור לגבי שירותי נוטריון"
+                 target="_blank" rel="noopener"
+                 class="group flex items-center justify-center gap-3 rounded-2xl bg-whatsapp px-7 py-4 text-lg font-bold text-white shadow-xl shadow-whatsapp/25 transition hover:-translate-y-0.5 hover:bg-whatsapp-dark"
+                 aria-label="פנייה מהירה בוואטסאפ (נפתח בחלון חדש)">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.87 9.87 0 004.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm5.8 14.13c-.24.68-1.42 1.31-1.96 1.36-.5.05-.99.23-3.35-.7-2.82-1.11-4.6-3.98-4.74-4.17-.14-.19-1.13-1.5-1.13-2.86s.71-2.03.96-2.31c.25-.28.55-.35.73-.35.18 0 .37 0 .53.01.17.01.4-.06.63.48.24.57.8 1.97.87 2.11.07.14.12.31.02.5-.09.19-.14.31-.28.47-.14.16-.3.36-.42.48-.14.14-.29.29-.12.57.16.28.73 1.21 1.57 1.96 1.08.96 1.99 1.26 2.27 1.4.28.14.45.12.61-.07.17-.19.7-.82.89-1.1.19-.28.37-.23.63-.14.25.09 1.65.78 1.93.92.28.14.47.21.54.33.07.11.07.66-.17 1.31z"/>
+                </svg>
+                פנייה מהירה ב-WhatsApp
+              </a>
+
+              <a href="tel:+972552625128"
+                 class="flex items-center justify-center gap-3 rounded-2xl bg-gold-600 px-7 py-4 text-lg font-bold text-white shadow-gold transition hover:-translate-y-0.5 hover:bg-gold-700"
+                 aria-label="חיוג למשרד בטלפון 055-262-5128">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"
+                     stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M6.6 3.5h-2A1.6 1.6 0 003 5.1C3 13.3 10.7 21 18.9 21a1.6 1.6 0 001.6-1.6v-2a1.1 1.1 0 00-.85-1.07l-3.3-.8a1.1 1.1 0 00-1.1.38l-1 1.2a13.6 13.6 0 01-5.35-5.35l1.2-1a1.1 1.1 0 00.38-1.1l-.8-3.3a1.1 1.1 0 00-1.07-.85z" />
+                </svg>
+                חייג עכשיו
+              </a>
+            </div>
+
+            <p class="mt-5 text-sm text-slate-400">
+              זמינים גם בשעות גמישות ובתיאום מראש · <a href="tel:+972552625128" class="font-semibold text-slate-200 underline-offset-4 hover:underline" dir="ltr">055-262-5128</a>
+            </p>
+          </div>
+
+          <!-- כרטיס אמון -->
+          <div class="lg:col-span-5">
+            <div class="rounded-3xl border border-white/10 bg-white/[0.06] p-7 backdrop-blur-sm sm:p-8">
+              <h2 class="text-lg font-bold text-white">מה חשוב לדעת</h2>
+              <ul class="mt-6 space-y-5">
+                <li class="flex gap-4">
+                  <span class="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gold-500/15 text-gold-500">
+                    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"
+                         stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M12 3l7.5 3v5.2c0 4.4-3 8.4-7.5 9.8-4.5-1.4-7.5-5.4-7.5-9.8V6L12 3z" />
+                    </svg>
+                  </span>
+                  <div>
+                    <p class="font-semibold text-white">נוטריון מוסמך</p>
+                    <p class="mt-0.5 text-sm leading-relaxed text-slate-300">אישורים בעלי תוקף מלא בישראל ובחו״ל, לפי חוק הנוטריונים.</p>
+                  </div>
+                </li>
+                <li class="flex gap-4">
+                  <span class="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gold-500/15 text-gold-500">
+                    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"
+                         stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <circle cx="12" cy="12" r="9" /><path d="M12 7.5V12l3 1.8" />
+                    </svg>
+                  </span>
+                  <div>
+                    <p class="font-semibold text-white">מענה מהיר</p>
+                    <p class="mt-0.5 text-sm leading-relaxed text-slate-300">אני חוזר לכל פנייה בוואטסאפ בזמן קצר, גם לשאלות קטנות.</p>
+                  </div>
+                </li>
+                <li class="flex gap-4">
+                  <span class="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gold-500/15 text-gold-500">
+                    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"
+                         stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M4 6h16M4 12h10M4 18h7" />
+                    </svg>
+                  </span>
+                  <div>
+                    <p class="font-semibold text-white">שקיפות בתמחור</p>
+                    <p class="mt-0.5 text-sm leading-relaxed text-slate-300">אגרות נוטריון קבועות בתקנות — מקבלים הצעה ברורה מראש.</p>
+                  </div>
+                </li>
+              </ul>
+
+              <div class="mt-7 rounded-2xl bg-navy-950/60 p-4 text-center">
+                <p class="text-sm text-slate-300">לא בטוחים איזה אישור נדרש?</p>
+                <a href="https://wa.me/972552625128?text=שלום, אני לא בטוח איזה אישור נוטריוני נדרש עבורי. אשמח להכוונה"
+                   target="_blank" rel="noopener"
+                   class="mt-1 inline-block font-bold text-gold-500 underline-offset-4 hover:underline">
+                  שלחו לי הודעה ואכוון אתכם ←
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SERVICES ==================== -->
+    <section id="services" class="py-20 sm:py-28">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+        <header class="reveal mx-auto max-w-2xl text-center">
+          <p class="text-sm font-bold uppercase tracking-[0.2em] text-gold-600">השירותים שאני מעניק</p>
+          <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-navy-900 sm:text-4xl">שירותים נוטריוניים</h2>
+          <p class="mt-4 text-lg leading-relaxed text-slate-600">
+            מגוון האישורים הנוטריוניים הנדרשים לרשויות בישראל ולגופים בחו״ל — בטיפול מלא מהמסמך ועד האישור החתום.
+          </p>
+        </header>
+
+        <ul class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+          <!-- אימות חתימה וייפוי כוח -->
+          <li class="reveal group relative flex flex-col rounded-2xl border border-slate-200/80 bg-white p-7 shadow-card transition duration-300 hover:-translate-y-1 hover:border-gold-500/40 hover:shadow-card-hover">
+            <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-navy-900 text-gold-500 transition group-hover:bg-gold-600 group-hover:text-white">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M15.5 3.5l5 5L9 20H4v-5L15.5 3.5z" /><path d="M13.5 5.5l5 5" />
+              </svg>
+            </span>
+            <h3 class="mt-5 text-xl font-bold text-navy-900">אימות חתימה וייפוי כוח</h3>
+            <p class="mt-3 flex-1 leading-relaxed text-slate-600">
+              אימות חתימה על מסמכים משפטיים וייפוי כוח נוטריוני — כולל ייפוי כוח בלתי חוזר לעסקאות מקרקעין ולבנקים.
+            </p>
+            <a href="https://wa.me/972552625128?text=שלום, אני מעוניין בבירור לגבי אימות חתימה וייפוי כוח נוטריוני"
+               target="_blank" rel="noopener"
+               class="mt-5 inline-flex items-center gap-1.5 font-semibold text-gold-700 transition hover:gap-2.5"
+               aria-label="לפרטים על אימות חתימה וייפוי כוח בוואטסאפ (נפתח בחלון חדש)">
+              לפרטים בוואטסאפ
+              <svg class="h-4 w-4 rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </li>
+
+          <!-- אישור תרגום נוטריוני -->
+          <li class="reveal group relative flex flex-col rounded-2xl border border-slate-200/80 bg-white p-7 shadow-card transition duration-300 hover:-translate-y-1 hover:border-gold-500/40 hover:shadow-card-hover">
+            <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-navy-900 text-gold-500 transition group-hover:bg-gold-600 group-hover:text-white">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 6h9M7.5 6v2.2c0 3.1-2 5.6-4.5 6.6" /><path d="M5 10.5c.9 2.4 2.9 4.3 5.4 5" />
+                <path d="M13 20l4-9 4 9M14.6 16.8h4.8" />
+              </svg>
+            </span>
+            <h3 class="mt-5 text-xl font-bold text-navy-900">אישור תרגום נוטריוני</h3>
+            <p class="mt-3 flex-1 leading-relaxed text-slate-600">
+              אישור נכונות תרגום למסמכים רשמיים — תעודות לידה, נישואין, גיליונות ציונים ותעודות השכלה, לצורך הגשה בארץ ובחו״ל.
+            </p>
+            <a href="https://wa.me/972552625128?text=שלום, אני מעוניין בבירור לגבי אישור תרגום נוטריוני"
+               target="_blank" rel="noopener"
+               class="mt-5 inline-flex items-center gap-1.5 font-semibold text-gold-700 transition hover:gap-2.5"
+               aria-label="לפרטים על אישור תרגום נוטריוני בוואטסאפ (נפתח בחלון חדש)">
+              לפרטים בוואטסאפ
+              <svg class="h-4 w-4 rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </li>
+
+          <!-- צוואות נוטריוניות -->
+          <li class="reveal group relative flex flex-col rounded-2xl border border-slate-200/80 bg-white p-7 shadow-card transition duration-300 hover:-translate-y-1 hover:border-gold-500/40 hover:shadow-card-hover">
+            <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-navy-900 text-gold-500 transition group-hover:bg-gold-600 group-hover:text-white">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M6.5 3h7L19 8.5V21H6.5A1.5 1.5 0 015 19.5v-15A1.5 1.5 0 016.5 3z" />
+                <path d="M13.5 3v5.5H19M9 13h6M9 16.5h4" />
+              </svg>
+            </span>
+            <h3 class="mt-5 text-xl font-bold text-navy-900">צוואות נוטריוניות</h3>
+            <p class="mt-3 flex-1 leading-relaxed text-slate-600">
+              עריכת צוואה בפני נוטריון בתוקף מלא, בליווי אישי ודיסקרטי, כולל בדיקת כשירות ושמירה על רצון המצווה.
+            </p>
+            <a href="https://wa.me/972552625128?text=שלום, אני מעוניין בבירור לגבי עריכת צוואה נוטריונית"
+               target="_blank" rel="noopener"
+               class="mt-5 inline-flex items-center gap-1.5 font-semibold text-gold-700 transition hover:gap-2.5"
+               aria-label="לפרטים על צוואות נוטריוניות בוואטסאפ (נפתח בחלון חדש)">
+              לפרטים בוואטסאפ
+              <svg class="h-4 w-4 rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </li>
+
+          <!-- אפוסטיל -->
+          <li class="reveal group relative flex flex-col rounded-2xl border border-slate-200/80 bg-white p-7 shadow-card transition duration-300 hover:-translate-y-1 hover:border-gold-500/40 hover:shadow-card-hover">
+            <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-navy-900 text-gold-500 transition group-hover:bg-gold-600 group-hover:text-white">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="9" /><path d="M3.2 12h17.6" />
+                <path d="M12 3.2c2.3 2.4 3.6 5.5 3.6 8.8s-1.3 6.4-3.6 8.8c-2.3-2.4-3.6-5.5-3.6-8.8S9.7 5.6 12 3.2z" />
+              </svg>
+            </span>
+            <h3 class="mt-5 text-xl font-bold text-navy-900">אישור אפוסטיל (Apostille)</h3>
+            <p class="mt-3 flex-1 leading-relaxed text-slate-600">
+              ליווי והכנת מסמכים לחותמת אפוסטיל לצורך הכרה במדינות אמנת האג — לימודים, אזרחות, עבודה ונישואין בחו״ל.
+            </p>
+            <a href="https://wa.me/972552625128?text=שלום, אני מעוניין בבירור לגבי אישור אפוסטיל"
+               target="_blank" rel="noopener"
+               class="mt-5 inline-flex items-center gap-1.5 font-semibold text-gold-700 transition hover:gap-2.5"
+               aria-label="לפרטים על אישור אפוסטיל בוואטסאפ (נפתח בחלון חדש)">
+              לפרטים בוואטסאפ
+              <svg class="h-4 w-4 rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </li>
+
+          <!-- הסכמי ממון -->
+          <li class="reveal group relative flex flex-col rounded-2xl border border-slate-200/80 bg-white p-7 shadow-card transition duration-300 hover:-translate-y-1 hover:border-gold-500/40 hover:shadow-card-hover">
+            <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-navy-900 text-gold-500 transition group-hover:bg-gold-600 group-hover:text-white">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 20.5s-7.2-4.1-8.6-8.6A4.6 4.6 0 0112 8.9a4.6 4.6 0 018.6 3c-1.4 4.5-8.6 8.6-8.6 8.6z" />
+              </svg>
+            </span>
+            <h3 class="mt-5 text-xl font-bold text-navy-900">הסכמי ממון</h3>
+            <p class="mt-3 flex-1 leading-relaxed text-slate-600">
+              אישור הסכם ממון בפני נוטריון לבני זוג ידועים בציבור, בהתאם לחוק יחסי ממון — בהליך פשוט וברור.
+            </p>
+            <a href="https://wa.me/972552625128?text=שלום, אני מעוניין בבירור לגבי אישור הסכם ממון"
+               target="_blank" rel="noopener"
+               class="mt-5 inline-flex items-center gap-1.5 font-semibold text-gold-700 transition hover:gap-2.5"
+               aria-label="לפרטים על הסכמי ממון בוואטסאפ (נפתח בחלון חדש)">
+              לפרטים בוואטסאפ
+              <svg class="h-4 w-4 rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </li>
+
+          <!-- אישור חיים -->
+          <li class="reveal group relative flex flex-col rounded-2xl border border-slate-200/80 bg-white p-7 shadow-card transition duration-300 hover:-translate-y-1 hover:border-gold-500/40 hover:shadow-card-hover">
+            <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-navy-900 text-gold-500 transition group-hover:bg-gold-600 group-hover:text-white">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="8" r="3.6" /><path d="M4.8 20.2a7.2 7.2 0 0114.4 0" />
+              </svg>
+            </span>
+            <h3 class="mt-5 text-xl font-bold text-navy-900">אישור חיים</h3>
+            <p class="mt-3 flex-1 leading-relaxed text-slate-600">
+              אישור נוטריוני על היות אדם בחיים, הנדרש לרוב עבור קרנות פנסיה וגופים ממשלתיים בישראל ובחו״ל.
+            </p>
+            <a href="https://wa.me/972552625128?text=שלום, אני מעוניין בבירור לגבי אישור חיים נוטריוני"
+               target="_blank" rel="noopener"
+               class="mt-5 inline-flex items-center gap-1.5 font-semibold text-gold-700 transition hover:gap-2.5"
+               aria-label="לפרטים על אישור חיים בוואטסאפ (נפתח בחלון חדש)">
+              לפרטים בוואטסאפ
+              <svg class="h-4 w-4 rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </li>
+
+        </ul>
+
+        <p class="reveal mt-10 text-center text-slate-600">
+          נדרש שירות נוטריוני אחר?
+          <a href="https://wa.me/972552625128?text=שלום, אני מעוניין בשירות נוטריוני שלא מופיע באתר"
+             target="_blank" rel="noopener"
+             class="font-bold text-gold-700 underline-offset-4 hover:underline">כתבו לי ואשמח לסייע</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================== ABOUT ==================== -->
+    <section id="about" class="border-y border-slate-200 bg-white py-20 sm:py-28">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid items-center gap-14 lg:grid-cols-2">
+
+          <div class="reveal">
+            <p class="text-sm font-bold uppercase tracking-[0.2em] text-gold-600">אודות</p>
+            <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-navy-900 sm:text-4xl">
+              ליווי משפטי אישי, בגובה העיניים
+            </h2>
+            <!-- TODO: להחליף בטקסט אודות אישי ובשם המלא -->
+            <div class="mt-6 space-y-4 text-lg leading-relaxed text-slate-600">
+              <p>
+                אני עורך דין ונוטריון מוסמך, ומעניק שירותי נוטריון ללקוחות פרטיים ועסקיים —
+                צוואות נוטריוניות, אישורי תרגום, אפוסטיל, אימות חתימה, ייפויי כוח והסכמי ממון.
+              </p>
+              <p>
+                מאחורי כל מסמך עומד תהליך חשוב בחיים: רילוקיישן, לימודים בחו״ל, עסקה משמעותית או
+                סידור ענייני המשפחה. לכן אני מקפיד להסביר כל שלב בשפה ברורה, לעמוד בלוחות הזמנים
+                שנקבעו, ולהיות זמין לשאלות — גם אחרי שהאישור כבר בידיים שלכם.
+              </p>
+              <p>
+                הפנייה מגיעה ישירות אליי, והטיפול נעשה על ידי — בלי מוקדים ובלי גורמי ביניים.
+              </p>
+            </div>
+          </div>
+
+          <div class="reveal">
+            <div class="rounded-3xl bg-navy-900 p-8 sm:p-10">
+              <h3 class="text-xl font-bold text-white">איך זה עובד?</h3>
+              <ol class="mt-8 space-y-7">
+                <li class="flex gap-5">
+                  <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gold-600 font-bold text-white">1</span>
+                  <div>
+                    <p class="font-semibold text-white">פנייה ראשונית</p>
+                    <p class="mt-1 leading-relaxed text-slate-300">שולחים הודעה בוואטסאפ עם תיאור קצר של המסמך והמטרה.</p>
+                  </div>
+                </li>
+                <li class="flex gap-5">
+                  <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gold-600 font-bold text-white">2</span>
+                  <div>
+                    <p class="font-semibold text-white">בדיקה והצעת מחיר</p>
+                    <p class="mt-1 leading-relaxed text-slate-300">בודקים איזה אישור נדרש, ומקבלים לוח זמנים ועלות לפי תקנות האגרות.</p>
+                  </div>
+                </li>
+                <li class="flex gap-5">
+                  <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gold-600 font-bold text-white">3</span>
+                  <div>
+                    <p class="font-semibold text-white">פגישה קצרה</p>
+                    <p class="mt-1 leading-relaxed text-slate-300">מגיעים עם תעודה מזהה, חותמים בפני הנוטריון — בדרך כלל תוך דקות ספורות.</p>
+                  </div>
+                </li>
+                <li class="flex gap-5">
+                  <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gold-600 font-bold text-white">4</span>
+                  <div>
+                    <p class="font-semibold text-white">קבלת האישור</p>
+                    <p class="mt-1 leading-relaxed text-slate-300">מקבלים את האישור החתום והחתום בחותמת הנוטריון, מוכן להגשה.</p>
+                  </div>
+                </li>
+              </ol>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== WHY US ==================== -->
+    <section id="why" class="py-20 sm:py-28">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+        <header class="reveal mx-auto max-w-2xl text-center">
+          <p class="text-sm font-bold uppercase tracking-[0.2em] text-gold-600">היתרון</p>
+          <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-navy-900 sm:text-4xl">למה לבחור בי</h2>
+          <p class="mt-4 text-lg leading-relaxed text-slate-600">
+            שירות נוטריוני הוא עניין של דיוק ואמינות — ואצלי גם של יחס אנושי.
+          </p>
+        </header>
+
+        <ul class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <li class="reveal rounded-2xl border border-slate-200/80 bg-white p-7 text-center shadow-card">
+            <span class="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-gold-100 text-gold-700">
+              <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 3l7.5 3v5.2c0 4.4-3 8.4-7.5 9.8-4.5-1.4-7.5-5.4-7.5-9.8V6L12 3z" /><path d="M9.2 12.1l1.9 1.9 3.7-3.9" />
+              </svg>
+            </span>
+            <h3 class="mt-5 text-lg font-bold text-navy-900">מקצועיות ללא פשרות</h3>
+            <p class="mt-2 leading-relaxed text-slate-600">אני בודק כל אישור לעומק כדי שיתקבל בגוף אליו הוא מוגש, בפעם הראשונה.</p>
+          </li>
+
+          <li class="reveal rounded-2xl border border-slate-200/80 bg-white p-7 text-center shadow-card">
+            <span class="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-gold-100 text-gold-700">
+              <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M13 2.5L4.5 13.5H11l-1 8 8.5-11H12l1-8z" />
+              </svg>
+            </span>
+            <h3 class="mt-5 text-lg font-bold text-navy-900">מענה מהיר ואישי</h3>
+            <p class="mt-2 leading-relaxed text-slate-600">מדברים ישירות איתי — בלי מוקדים, בלי הפניות מיותרות.</p>
+          </li>
+
+          <li class="reveal rounded-2xl border border-slate-200/80 bg-white p-7 text-center shadow-card">
+            <span class="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-gold-100 text-gold-700">
+              <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 20.5s-7.2-4.1-8.6-8.6A4.6 4.6 0 0112 8.9a4.6 4.6 0 018.6 3c-1.4 4.5-8.6 8.6-8.6 8.6z" />
+              </svg>
+            </span>
+            <h3 class="mt-5 text-lg font-bold text-navy-900">יחס אדיב ואנושי</h3>
+            <p class="mt-2 leading-relaxed text-slate-600">אני מסביר בשפה פשוטה, בסבלנות, ובלי לגרום לכם להרגיש לא בנוח לשאול.</p>
+          </li>
+
+          <li class="reveal rounded-2xl border border-slate-200/80 bg-white p-7 text-center shadow-card">
+            <span class="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-gold-100 text-gold-700">
+              <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="9" /><path d="M12 7.5V12l3 1.8" />
+              </svg>
+            </span>
+            <h3 class="mt-5 text-lg font-bold text-navy-900">עמידה בזמנים</h3>
+            <p class="mt-2 leading-relaxed text-slate-600">אני מתחייב ללוח זמנים ברור מראש — ועומד בו, גם כשהתאריך לוחץ.</p>
+          </li>
+        </ul>
+
+        <!-- פס CTA -->
+        <div class="reveal mt-16 overflow-hidden rounded-3xl bg-navy-900 px-8 py-10 sm:px-12">
+          <div class="flex flex-col items-center justify-between gap-7 text-center lg:flex-row lg:text-right">
+            <div>
+              <h3 class="text-2xl font-extrabold text-white sm:text-3xl">יש לכם מסמך שדורש אישור נוטריוני?</h3>
+              <p class="mt-2 text-lg text-slate-300">שלחו הודעה קצרה ותקבלו תשובה עם המחיר ולוח הזמנים המדויק.</p>
+            </div>
+            <a href="https://wa.me/972552625128?text=שלום, יש לי מסמך שדורש אישור נוטריוני. אשמח לפרטים"
+               target="_blank" rel="noopener"
+               class="flex shrink-0 items-center gap-3 rounded-2xl bg-whatsapp px-7 py-4 text-lg font-bold text-white shadow-xl shadow-whatsapp/25 transition hover:-translate-y-0.5 hover:bg-whatsapp-dark"
+               aria-label="פנייה בוואטסאפ (נפתח בחלון חדש)">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.87 9.87 0 004.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm5.8 14.13c-.24.68-1.42 1.31-1.96 1.36-.5.05-.99.23-3.35-.7-2.82-1.11-4.6-3.98-4.74-4.17-.14-.19-1.13-1.5-1.13-2.86s.71-2.03.96-2.31c.25-.28.55-.35.73-.35.18 0 .37 0 .53.01.17.01.4-.06.63.48.24.57.8 1.97.87 2.11.07.14.12.31.02.5-.09.19-.14.31-.28.47-.14.16-.3.36-.42.48-.14.14-.29.29-.12.57.16.28.73 1.21 1.57 1.96 1.08.96 1.99 1.26 2.27 1.4.28.14.45.12.61-.07.17-.19.7-.82.89-1.1.19-.28.37-.23.63-.14.25.09 1.65.78 1.93.92.28.14.47.21.54.33.07.11.07.66-.17 1.31z"/>
+              </svg>
+              דברו איתי בוואטסאפ
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FAQ ==================== -->
+    <section id="faq" class="border-t border-slate-200 bg-white py-20 sm:py-28">
+      <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+
+        <header class="reveal text-center">
+          <p class="text-sm font-bold uppercase tracking-[0.2em] text-gold-600">שאלות ותשובות</p>
+          <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-navy-900 sm:text-4xl">שאלות נפוצות</h2>
+        </header>
+
+        <div class="reveal mt-12 space-y-4">
+
+          <details class="group rounded-2xl border border-slate-200 bg-slate-50 px-6 py-5 transition hover:border-slate-300">
+            <summary class="flex items-center justify-between gap-4">
+              <h3 class="text-lg font-bold text-navy-900">מה זה אפוסטיל ומתי צריך אותו?</h3>
+              <svg class="faq-chevron h-5 w-5 shrink-0 text-gold-600 transition-transform duration-300" viewBox="0 0 24 24"
+                   fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </summary>
+            <p class="mt-4 leading-relaxed text-slate-600">
+              אפוסטיל היא חותמת בינלאומית המאשרת את האותנטיות של מסמך ציבורי, כך שיוכר במדינות החתומות על
+              אמנת האג. נדרש בדרך כלל ללימודים בחו״ל, בקשות אזרחות, נישואין בחו״ל והגשת מסמכים לרשויות זרות.
+            </p>
+          </details>
+
+          <details class="group rounded-2xl border border-slate-200 bg-slate-50 px-6 py-5 transition hover:border-slate-300">
+            <summary class="flex items-center justify-between gap-4">
+              <h3 class="text-lg font-bold text-navy-900">כמה זמן לוקח לקבל אישור נוטריוני?</h3>
+              <svg class="faq-chevron h-5 w-5 shrink-0 text-gold-600 transition-transform duration-300" viewBox="0 0 24 24"
+                   fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </summary>
+            <p class="mt-4 leading-relaxed text-slate-600">
+              רוב האישורים — אימות חתימה, ייפוי כוח ואישור חיים — מונפקים במעמד הפגישה עצמה, שנמשכת דקות ספורות.
+              אישורי תרגום ותהליכי אפוסטיל דורשים זמן עיבוד נוסף; תקבלו לוח זמנים מדויק כבר בפנייה הראשונה.
+            </p>
+          </details>
+
+          <details class="group rounded-2xl border border-slate-200 bg-slate-50 px-6 py-5 transition hover:border-slate-300">
+            <summary class="flex items-center justify-between gap-4">
+              <h3 class="text-lg font-bold text-navy-900">כמה עולה שירות נוטריוני?</h3>
+              <svg class="faq-chevron h-5 w-5 shrink-0 text-gold-600 transition-transform duration-300" viewBox="0 0 24 24"
+                   fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </summary>
+            <p class="mt-4 leading-relaxed text-slate-600">
+              אגרות הנוטריון קבועות בתקנות הנוטריונים (שכר שירותים) ומתעדכנות מדי שנה — כלומר המחיר אחיד
+              אצל כל נוטריון בישראל ואינו נתון למשא ומתן. אשמח למסור לכם את העלות המדויקת לשירות הספציפי בפנייה.
+            </p>
+          </details>
+
+          <details class="group rounded-2xl border border-slate-200 bg-slate-50 px-6 py-5 transition hover:border-slate-300">
+            <summary class="flex items-center justify-between gap-4">
+              <h3 class="text-lg font-bold text-navy-900">אילו מסמכים צריך להביא לפגישה?</h3>
+              <svg class="faq-chevron h-5 w-5 shrink-0 text-gold-600 transition-transform duration-300" viewBox="0 0 24 24"
+                   fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </summary>
+            <p class="mt-4 leading-relaxed text-slate-600">
+              תמיד יש להביא תעודה מזהה בתוקף (תעודת זהות, דרכון או רישיון נהיגה) ואת המסמך המקורי הרלוונטי.
+              לשירותים מסוימים נדרשים מסמכים נוספים — אעדכן אתכם ברשימה מדויקת מראש כדי שלא תגיעו פעמיים.
+            </p>
+          </details>
+
+          <details class="group rounded-2xl border border-slate-200 bg-slate-50 px-6 py-5 transition hover:border-slate-300">
+            <summary class="flex items-center justify-between gap-4">
+              <h3 class="text-lg font-bold text-navy-900">האם חובה להגיע פיזית למשרד?</h3>
+              <svg class="faq-chevron h-5 w-5 shrink-0 text-gold-600 transition-transform duration-300" viewBox="0 0 24 24"
+                   fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </summary>
+            <p class="mt-4 leading-relaxed text-slate-600">
+              אימות חתימה מחייב על פי חוק התייצבות אישית בפני הנוטריון, לצורך זיהוי ואימות. עם זאת, חלק
+              מהשירותים אינם דורשים נוכחות, ובמקרים של מוגבלות או אשפוז ניתן לתאם שאגיע אליכם.
+            </p>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section id="contact" class="bg-slate-50 py-20 sm:py-28" data-contact>
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+        <header class="reveal mx-auto max-w-2xl text-center">
+          <p class="text-sm font-bold uppercase tracking-[0.2em] text-gold-600">אשמח לעמוד לשירותכם</p>
+          <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-navy-900 sm:text-4xl">צור קשר</h2>
+          <p class="mt-4 text-lg leading-relaxed text-slate-600">
+            השאירו פרטים ואחזור אליכם, או פשוט שלחו הודעה ישירות בוואטסאפ — מה שנוח לכם.
+          </p>
+        </header>
+
+        <div class="mt-14 grid gap-8 lg:grid-cols-5">
+
+          <!-- טופס -->
+          <div class="reveal lg:col-span-3">
+            <form data-contact-form novalidate
+                  class="rounded-3xl border border-slate-200/80 bg-white p-7 shadow-card sm:p-9">
+              <h3 class="text-xl font-bold text-navy-900">השאירו פרטים</h3>
+              <p class="mt-2 text-sm leading-relaxed text-slate-500">
+                לחיצה על הכפתור תפתח שיחת וואטסאפ עם ההודעה שלכם מוכנה לשליחה.
+              </p>
+
+              <div class="mt-7 space-y-5">
+                <div>
+                  <label for="name" class="block text-sm font-semibold text-navy-900">שם מלא <span class="text-gold-700" aria-hidden="true">*</span></label>
+                  <input type="text" id="name" name="name" autocomplete="name" required
+                         aria-required="true" aria-describedby="name-error"
+                         placeholder="ישראל ישראלי"
+                         class="mt-2 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-navy-900 placeholder:text-slate-400 transition focus:border-gold-600 focus:ring-2 focus:ring-gold-600/20" />
+                  <p id="name-error" data-error-for="name" class="mt-1.5 hidden text-sm font-medium text-red-600"></p>
+                </div>
+
+                <div>
+                  <label for="phone" class="block text-sm font-semibold text-navy-900">טלפון <span class="text-gold-700" aria-hidden="true">*</span></label>
+                  <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" required dir="ltr"
+                         aria-required="true" aria-describedby="phone-error"
+                         placeholder="050-0000000"
+                         class="mt-2 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-right text-navy-900 placeholder:text-slate-400 transition focus:border-gold-600 focus:ring-2 focus:ring-gold-600/20" />
+                  <p id="phone-error" data-error-for="phone" class="mt-1.5 hidden text-sm font-medium text-red-600"></p>
+                </div>
+
+                <div>
+                  <label for="service" class="block text-sm font-semibold text-navy-900">השירות הנדרש</label>
+                  <select id="service" name="service"
+                          class="mt-2 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-navy-900 transition focus:border-gold-600 focus:ring-2 focus:ring-gold-600/20">
+                    <option value="">לא בטוח / שירות אחר</option>
+                    <option value="אימות חתימה וייפוי כוח">אימות חתימה וייפוי כוח</option>
+                    <option value="אישור תרגום נוטריוני">אישור תרגום נוטריוני</option>
+                    <option value="צוואה נוטריונית">צוואה נוטריונית</option>
+                    <option value="אישור אפוסטיל">אישור אפוסטיל</option>
+                    <option value="הסכם ממון">הסכם ממון</option>
+                    <option value="אישור חיים">אישור חיים</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="message" class="block text-sm font-semibold text-navy-900">פרטים נוספים <span class="font-normal text-slate-400">(אופציונלי)</span></label>
+                  <textarea id="message" name="message" rows="3"
+                            placeholder="לדוגמה: צריך אפוסטיל על תעודת לידה עבור אזרחות פורטוגלית"
+                            class="mt-2 w-full resize-y rounded-xl border border-slate-300 bg-white px-4 py-3 text-navy-900 placeholder:text-slate-400 transition focus:border-gold-600 focus:ring-2 focus:ring-gold-600/20"></textarea>
+                </div>
+              </div>
+
+              <button type="submit"
+                      class="mt-7 flex w-full items-center justify-center gap-3 rounded-2xl bg-whatsapp px-6 py-4 text-lg font-bold text-white shadow-lg shadow-whatsapp/25 transition hover:-translate-y-0.5 hover:bg-whatsapp-dark">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.87 9.87 0 004.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm5.8 14.13c-.24.68-1.42 1.31-1.96 1.36-.5.05-.99.23-3.35-.7-2.82-1.11-4.6-3.98-4.74-4.17-.14-.19-1.13-1.5-1.13-2.86s.71-2.03.96-2.31c.25-.28.55-.35.73-.35.18 0 .37 0 .53.01.17.01.4-.06.63.48.24.57.8 1.97.87 2.11.07.14.12.31.02.5-.09.19-.14.31-.28.47-.14.16-.3.36-.42.48-.14.14-.29.29-.12.57.16.28.73 1.21 1.57 1.96 1.08.96 1.99 1.26 2.27 1.4.28.14.45.12.61-.07.17-.19.7-.82.89-1.1.19-.28.37-.23.63-.14.25.09 1.65.78 1.93.92.28.14.47.21.54.33.07.11.07.66-.17 1.31z"/>
+                </svg>
+                שליחת הפנייה בוואטסאפ
+              </button>
+
+              <p data-form-status role="status" aria-live="polite" class="mt-4 text-center text-sm font-medium text-slate-600"></p>
+            </form>
+          </div>
+
+          <!-- פרטי התקשרות -->
+          <div class="reveal lg:col-span-2">
+            <div class="h-full rounded-3xl bg-navy-900 p-7 sm:p-9">
+              <h3 class="text-xl font-bold text-white">פרטי התקשרות</h3>
+
+              <ul class="mt-7 space-y-6">
+                <li>
+                  <a href="tel:+972552625128" class="group flex items-start gap-4"
+                     aria-label="חיוג למשרד בטלפון 055-262-5128">
+                    <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gold-500/15 text-gold-500 transition group-hover:bg-gold-600 group-hover:text-white">
+                      <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"
+                           stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M6.6 3.5h-2A1.6 1.6 0 003 5.1C3 13.3 10.7 21 18.9 21a1.6 1.6 0 001.6-1.6v-2a1.1 1.1 0 00-.85-1.07l-3.3-.8a1.1 1.1 0 00-1.1.38l-1 1.2a13.6 13.6 0 01-5.35-5.35l1.2-1a1.1 1.1 0 00.38-1.1l-.8-3.3a1.1 1.1 0 00-1.07-.85z" />
+                      </svg>
+                    </span>
+                    <span>
+                      <span class="block text-sm text-slate-400">טלפון</span>
+                      <span class="block text-lg font-bold text-white" dir="ltr">055-262-5128</span>
+                    </span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="https://wa.me/972552625128?text=שלום, אני מעוניין בבירור לגבי שירותי נוטריון"
+                     target="_blank" rel="noopener" class="group flex items-start gap-4"
+                     aria-label="פנייה בוואטסאפ (נפתח בחלון חדש)">
+                    <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-whatsapp/15 text-whatsapp transition group-hover:bg-whatsapp group-hover:text-white">
+                      <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.87 9.87 0 004.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm5.8 14.13c-.24.68-1.42 1.31-1.96 1.36-.5.05-.99.23-3.35-.7-2.82-1.11-4.6-3.98-4.74-4.17-.14-.19-1.13-1.5-1.13-2.86s.71-2.03.96-2.31c.25-.28.55-.35.73-.35.18 0 .37 0 .53.01.17.01.4-.06.63.48.24.57.8 1.97.87 2.11.07.14.12.31.02.5-.09.19-.14.31-.28.47-.14.16-.3.36-.42.48-.14.14-.29.29-.12.57.16.28.73 1.21 1.57 1.96 1.08.96 1.99 1.26 2.27 1.4.28.14.45.12.61-.07.17-.19.7-.82.89-1.1.19-.28.37-.23.63-.14.25.09 1.65.78 1.93.92.28.14.47.21.54.33.07.11.07.66-.17 1.31z"/>
+                      </svg>
+                    </span>
+                    <span>
+                      <span class="block text-sm text-slate-400">וואטסאפ</span>
+                      <span class="block text-lg font-bold text-white">שליחת הודעה מיידית</span>
+                    </span>
+                  </a>
+                </li>
+
+                <!-- TODO: להחליף בכתובת האמיתית -->
+                <li class="flex items-start gap-4">
+                  <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gold-500/15 text-gold-500">
+                    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"
+                         stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M12 21s7-5.6 7-11a7 7 0 10-14 0c0 5.4 7 11 7 11z" /><circle cx="12" cy="10" r="2.6" />
+                    </svg>
+                  </span>
+                  <span>
+                    <span class="block text-sm text-slate-400">כתובת</span>
+                    <span class="block font-semibold text-white">רחוב הדוגמה 1, תל אביב</span>
+                    <span class="mt-0.5 block text-sm text-slate-300">קבלת קהל בתיאום מראש · שירות בכל הארץ</span>
+                  </span>
+                </li>
+
+                <!-- TODO: להחליף בשעות הפעילות האמיתיות -->
+                <li class="flex items-start gap-4">
+                  <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gold-500/15 text-gold-500">
+                    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"
+                         stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <circle cx="12" cy="12" r="9" /><path d="M12 7.5V12l3 1.8" />
+                    </svg>
+                  </span>
+                  <span>
+                    <span class="block text-sm text-slate-400">שעות פעילות</span>
+                    <span class="block font-semibold text-white">א׳–ה׳ · 09:00–18:00</span>
+                    <span class="mt-0.5 block text-sm text-slate-300">ו׳ · 09:00–13:00 · מענה גמיש בתיאום</span>
+                  </span>
+                </li>
+              </ul>
+
+              <div class="mt-8 rounded-2xl bg-navy-950/60 p-5">
+                <p class="text-sm leading-relaxed text-slate-300">
+                  מקרה דחוף? ציינו זאת בהודעה ואשתדל לתת מענה עוד באותו יום.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-navy-950 pt-16 pb-8 text-slate-300">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+      <div class="grid gap-10 md:grid-cols-3">
+        <div>
+          <div class="flex items-center gap-3">
+            <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-gold-600 to-gold-700">
+              <svg class="h-5 w-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 3l7.5 3v5.2c0 4.4-3 8.4-7.5 9.8-4.5-1.4-7.5-5.4-7.5-9.8V6L12 3z" /><path d="M9.2 12.1l1.9 1.9 3.7-3.9" />
+              </svg>
+            </span>
+            <!-- TODO: להחליף בשם המלא, למשל "עו״ד ישראל ישראלי — נוטריון" -->
+            <span class="text-lg font-bold text-white">עו״ד ונוטריון</span>
+          </div>
+          <p class="mt-4 leading-relaxed text-slate-400">
+            נוטריון מוסמך ללקוחות פרטיים ועסקיים — צוואות נוטריוניות, אישורי תרגום, אפוסטיל,
+            אימות חתימה, ייפויי כוח והסכמי ממון.
+          </p>
+        </div>
+
+        <nav aria-label="ניווט תחתון">
+          <h2 class="text-base font-bold text-white">ניווט מהיר</h2>
+          <ul class="mt-4 space-y-2.5">
+            <li><a href="#services" class="transition hover:text-gold-500">שירותים נוטריוניים</a></li>
+            <li><a href="#about"    class="transition hover:text-gold-500">אודות</a></li>
+            <li><a href="#why"      class="transition hover:text-gold-500">למה לבחור בי</a></li>
+            <li><a href="#faq"      class="transition hover:text-gold-500">שאלות נפוצות</a></li>
+            <li><a href="#contact"  class="transition hover:text-gold-500">צור קשר</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h2 class="text-base font-bold text-white">יצירת קשר</h2>
+          <ul class="mt-4 space-y-2.5">
+            <li>
+              <a href="tel:+972552625128" class="transition hover:text-gold-500" aria-label="חיוג למשרד בטלפון 055-262-5128">
+                טלפון: <span dir="ltr">055-262-5128</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://wa.me/972552625128?text=שלום, אני מעוניין בבירור לגבי שירותי נוטריון"
+                 target="_blank" rel="noopener" class="transition hover:text-gold-500"
+                 aria-label="פנייה בוואטסאפ (נפתח בחלון חדש)">וואטסאפ: פנייה מהירה</a>
+            </li>
+            <!-- TODO: להחליף בכתובת ובשעות האמיתיות -->
+            <li>רחוב הדוגמה 1, תל אביב</li>
+            <li>א׳–ה׳ 09:00–18:00 · ו׳ 09:00–13:00</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- הבהרה משפטית והצהרת נגישות -->
+      <div id="legal" class="mt-12 border-t border-white/10 pt-8">
+        <h2 class="text-sm font-bold text-white">הבהרה משפטית</h2>
+        <p class="mt-2 text-sm leading-relaxed text-slate-400">
+          האמור באתר זה הוא מידע כללי בלבד ואינו מהווה ייעוץ משפטי, חוות דעת או תחליף לייעוץ פרטני
+          המתחשב בנסיבות המקרה. אין להסתמך על התכנים באתר לצורך קבלת החלטות משפטיות, ואין בשימוש
+          באתר או בפנייה דרכו כדי ליצור יחסי עורך דין–לקוח. שכר שירותי נוטריון קבוע בתקנות הנוטריונים
+          (שכר שירותים) ומתעדכן מעת לעת. התכנים מנוסחים בלשון זכר מטעמי נוחות בלבד ומופנים לכל המגדרים.
+        </p>
+
+        <h2 id="accessibility" class="mt-6 text-sm font-bold text-white">הצהרת נגישות</h2>
+        <p class="mt-2 text-sm leading-relaxed text-slate-400">
+          אני פועל להנגשת האתר ולאפשר שימוש נוח לכלל המשתמשים, לרבות ניווט מלא באמצעות מקלדת,
+          מבנה סמנטי לקוראי מסך וניגודיות צבעים תקינה. נתקלתם בקושי בשימוש באתר?
+          <a href="https://wa.me/972552625128?text=שלום, נתקלתי בבעיית נגישות באתר"
+             target="_blank" rel="noopener" class="font-semibold text-gold-500 underline-offset-4 hover:underline">
+            אשמח לשמוע ולתקן</a>.
+        </p>
+      </div>
+
+      <div class="mt-8 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 text-sm text-slate-500 sm:flex-row">
+        <p>© <span data-year>2026</span> כל הזכויות שמורות · עו״ד ונוטריון</p>
+        <p><a href="#legal" class="transition hover:text-gold-500">הבהרה משפטית</a> · <a href="#accessibility" class="transition hover:text-gold-500">הצהרת נגישות</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== FLOATING WHATSAPP ==================== -->
+  <a href="https://wa.me/972552625128?text=שלום, אני מעוניין בבירור לגבי שירותי נוטריון"
+     target="_blank" rel="noopener"
+     data-fab
+     class="group fixed bottom-5 right-5 z-40 flex items-center gap-3 rounded-full bg-whatsapp py-3.5 pr-4 pl-5 text-white shadow-2xl shadow-whatsapp/40 transition-all duration-300 hover:bg-whatsapp-dark hover:shadow-whatsapp/60 sm:bottom-7 sm:right-7"
+     aria-label="פנייה מהירה בוואטסאפ למספר 055-262-5128 (נפתח בחלון חדש)">
+    <span class="fab-pulse flex h-8 w-8 items-center justify-center rounded-full">
+      <svg class="h-7 w-7" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.87 9.87 0 004.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm5.8 14.13c-.24.68-1.42 1.31-1.96 1.36-.5.05-.99.23-3.35-.7-2.82-1.11-4.6-3.98-4.74-4.17-.14-.19-1.13-1.5-1.13-2.86s.71-2.03.96-2.31c.25-.28.55-.35.73-.35.18 0 .37 0 .53.01.17.01.4-.06.63.48.24.57.8 1.97.87 2.11.07.14.12.31.02.5-.09.19-.14.31-.28.47-.14.16-.3.36-.42.48-.14.14-.29.29-.12.57.16.28.73 1.21 1.57 1.96 1.08.96 1.99 1.26 2.27 1.4.28.14.45.12.61-.07.17-.19.7-.82.89-1.1.19-.28.37-.23.63-.14.25.09 1.65.78 1.93.92.28.14.47.21.54.33.07.11.07.66-.17 1.31z"/>
+      </svg>
+    </span>
+    <span class="max-w-0 overflow-hidden whitespace-nowrap text-[15px] font-bold opacity-0 transition-all duration-300 group-hover:max-w-[10rem] group-hover:opacity-100 group-focus-visible:max-w-[10rem] group-focus-visible:opacity-100">
+      דברו איתי
+    </span>
+  </a>
+
+  <!-- נתונים מובנים למנועי חיפוש -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    "name": "עו״ד ונוטריון",
+    "description": "נוטריון מוסמך: צוואות נוטריוניות, אישורי תרגום, אפוסטיל, אימות חתימה, ייפוי כוח והסכמי ממון.",
+    "telephone": "+972-55-262-5128",
+    "areaServed": "IL",
+    "priceRange": "$$",
+    "_comment_address": "TODO: להוסיף כאן address אמיתי (streetAddress / addressLocality) לפני קידום בגוגל. עדיף בלי כתובת מאשר עם כתובת שגויה.",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Friday",
+        "opens": "09:00",
+        "closes": "13:00"
+      }
+    ]
+  }
+  </script>
+
+  <script>
+    (function () {
+      'use strict';
+
+      /* ---------- הגדרות מרכזיות ---------- */
+      var WHATSAPP_NUMBER = '972552625128';
+
+      /* ---------- כותרת דביקה: מעבר בין מצב שקוף למצב לבן ---------- */
+      var header = document.querySelector('[data-header]');
+      var brand = header.querySelector('[data-brand]');
+      var tagline = header.querySelector('[data-tagline]');
+      var callBtn = header.querySelector('[data-call-btn]');
+      var menuToggle = header.querySelector('[data-menu-toggle]');
+      var navLinks = header.querySelectorAll('[data-nav] a');
+
+      function syncHeader() {
+        var solid = window.scrollY > 24;
+
+        header.classList.toggle('bg-white/95', solid);
+        header.classList.toggle('backdrop-blur-md', solid);
+        header.classList.toggle('shadow-lg', solid);
+        header.classList.toggle('shadow-navy-900/5', solid);
+
+        brand.classList.toggle('text-navy-900', solid);
+        brand.classList.toggle('text-white', !solid);
+        tagline.classList.toggle('text-gold-700', solid);
+        tagline.classList.toggle('text-gold-500', !solid);
+
+        callBtn.classList.toggle('border-slate-300', solid);
+        callBtn.classList.toggle('text-navy-900', solid);
+        callBtn.classList.toggle('hover:bg-slate-100', solid);
+        callBtn.classList.toggle('border-white/25', !solid);
+        callBtn.classList.toggle('text-white', !solid);
+        callBtn.classList.toggle('hover:bg-white/10', !solid);
+
+        menuToggle.classList.toggle('border-slate-300', solid);
+        menuToggle.classList.toggle('text-navy-900', solid);
+        menuToggle.classList.toggle('hover:bg-slate-100', solid);
+        menuToggle.classList.toggle('border-white/25', !solid);
+        menuToggle.classList.toggle('text-white', !solid);
+        menuToggle.classList.toggle('hover:bg-white/10', !solid);
+
+        navLinks.forEach(function (link) {
+          link.classList.toggle('text-slate-700', solid);
+          link.classList.toggle('hover:bg-slate-100', solid);
+          link.classList.toggle('hover:text-navy-900', solid);
+          link.classList.toggle('text-slate-200', !solid);
+          link.classList.toggle('hover:bg-white/10', !solid);
+          link.classList.toggle('hover:text-white', !solid);
+        });
+      }
+
+      window.addEventListener('scroll', syncHeader, { passive: true });
+      syncHeader();
+
+      /* ---------- תפריט נייד ---------- */
+      var mobileMenu = document.querySelector('[data-mobile-menu]');
+      var iconOpen = menuToggle.querySelector('[data-icon-open]');
+      var iconClose = menuToggle.querySelector('[data-icon-close]');
+
+      function setMenu(open) {
+        mobileMenu.hidden = !open;
+        menuToggle.setAttribute('aria-expanded', String(open));
+        menuToggle.setAttribute('aria-label', open ? 'סגירת תפריט ניווט' : 'פתיחת תפריט ניווט');
+        iconOpen.classList.toggle('hidden', open);
+        iconClose.classList.toggle('hidden', !open);
+      }
+
+      setMenu(false);
+
+      menuToggle.addEventListener('click', function () {
+        setMenu(mobileMenu.hidden);
+      });
+
+      mobileMenu.addEventListener('click', function (event) {
+        if (event.target.closest('a')) setMenu(false);
+      });
+
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && !mobileMenu.hidden) {
+          setMenu(false);
+          menuToggle.focus();
+        }
+      });
+
+      /* ---------- חשיפה הדרגתית בגלילה ----------
+         חלק ניכר מהתנועה לאתר מגיע מדפדפנים מוטמעים (וואטסאפ, אינסטגרם), שבהם
+         IntersectionObserver לא תמיד אמין. לכן קיים גם מסלול גיבוי מבוסס גלילה
+         וטיימר בטיחות — כדי שתוכן לעולם לא יישאר מוסתר. */
+      var revealables = [].slice.call(document.querySelectorAll('.reveal'));
+
+      revealables.forEach(function (el, index) {
+        el.style.transitionDelay = Math.min(index % 4, 3) * 70 + 'ms';
+      });
+
+      function reveal(el) {
+        el.classList.add('is-visible');
+      }
+
+      function revealAll() {
+        revealables.forEach(reveal);
+        revealables = [];
+      }
+
+      function revealInView() {
+        if (!revealables.length) return;
+        revealables = revealables.filter(function (el) {
+          var top = el.getBoundingClientRect().top;
+          if (top >= window.innerHeight - 40) return true;
+          reveal(el);
+          return false;
+        });
+      }
+
+      if ('IntersectionObserver' in window) {
+        var revealObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            reveal(entry.target);
+            revealObserver.unobserve(entry.target);
+            revealables = revealables.filter(function (el) { return el !== entry.target; });
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+        revealables.forEach(function (el) { revealObserver.observe(el); });
+      }
+
+      revealInView();
+
+      var revealTick = false;
+      window.addEventListener('scroll', function () {
+        if (revealTick) return;
+        revealTick = true;
+        window.requestAnimationFrame(function () {
+          revealTick = false;
+          revealInView();
+        });
+      }, { passive: true });
+      window.addEventListener('resize', revealInView, { passive: true });
+
+      // רשת ביטחון אחרונה: אם דבר מכל אלה לא פעל, מציגים הכול
+      window.setTimeout(revealAll, 6000);
+
+      /* ---------- הסתרת הכפתור הצף בסקשן "צור קשר" ---------- */
+      var fab = document.querySelector('[data-fab]');
+      var contactSection = document.querySelector('[data-contact]');
+
+      if (fab && contactSection && 'IntersectionObserver' in window) {
+        new IntersectionObserver(function (entries) {
+          var hidden = entries[0].isIntersecting;
+          fab.classList.toggle('translate-y-24', hidden);
+          fab.classList.toggle('opacity-0', hidden);
+          fab.classList.toggle('pointer-events-none', hidden);
+          fab.setAttribute('aria-hidden', String(hidden));
+          fab.tabIndex = hidden ? -1 : 0;
+        }, { threshold: 0.25 }).observe(contactSection);
+      }
+
+      /* ---------- טופס יצירת קשר → הודעת וואטסאפ ---------- */
+      var form = document.querySelector('[data-contact-form]');
+
+      function showError(field, message) {
+        var input = form.elements[field];
+        var target = form.querySelector('[data-error-for="' + field + '"]');
+        input.setAttribute('aria-invalid', 'true');
+        input.classList.add('border-red-500');
+        target.textContent = message;
+        target.classList.remove('hidden');
+      }
+
+      function clearError(field) {
+        var input = form.elements[field];
+        var target = form.querySelector('[data-error-for="' + field + '"]');
+        input.removeAttribute('aria-invalid');
+        input.classList.remove('border-red-500');
+        target.textContent = '';
+        target.classList.add('hidden');
+      }
+
+      function isValidIsraeliPhone(value) {
+        var digits = value.replace(/\D/g, '').replace(/^972/, '0');
+        return /^0\d{8,9}$/.test(digits);
+      }
+
+      ['name', 'phone'].forEach(function (field) {
+        form.elements[field].addEventListener('input', function () {
+          if (form.elements[field].getAttribute('aria-invalid')) clearError(field);
+        });
+      });
+
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        var status = form.querySelector('[data-form-status]');
+        var name = form.elements.name.value.trim();
+        var phone = form.elements.phone.value.trim();
+        var service = form.elements.service.value;
+        var message = form.elements.message.value.trim();
+        var firstInvalid = null;
+
+        status.textContent = '';
+
+        if (name.length < 2) {
+          showError('name', 'נא להזין שם מלא');
+          firstInvalid = firstInvalid || form.elements.name;
+        } else {
+          clearError('name');
+        }
+
+        if (!isValidIsraeliPhone(phone)) {
+          showError('phone', 'נא להזין מספר טלפון ישראלי תקין (לדוגמה 050-0000000)');
+          firstInvalid = firstInvalid || form.elements.phone;
+        } else {
+          clearError('phone');
+        }
+
+        if (firstInvalid) {
+          status.textContent = 'נא להשלים את השדות המסומנים ולנסות שוב.';
+          status.className = 'mt-4 text-center text-sm font-medium text-red-600';
+          firstInvalid.focus();
+          return;
+        }
+
+        var lines = [
+          'שלום, אני מעוניין בבירור לגבי שירותי נוטריון.',
+          'שם: ' + name,
+          'טלפון: ' + phone,
+          'שירות מבוקש: ' + (service || 'טרם ידוע / שירות אחר'),
+        ];
+        if (message) lines.push('פרטים נוספים: ' + message);
+
+        var url = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(lines.join('\n'));
+        window.open(url, '_blank', 'noopener');
+
+        status.textContent = 'פותחים עבורכם וואטסאפ עם ההודעה מוכנה לשליחה…';
+        status.className = 'mt-4 text-center text-sm font-medium text-whatsapp-dark';
+        form.reset();
+      });
+
+      /* ---------- שנה נוכחית בפוטר ---------- */
+      document.querySelector('[data-year]').textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>

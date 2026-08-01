@@ -1,0 +1,12 @@
+# Windows
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+
+# עורכים
+.vscode/
+.idea/
+*.swp
